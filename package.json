@@ -1,0 +1,32 @@
+{
+  "name": "node-peercoin",
+  "description": "Communicate with peercoind via JSON-RPC",
+  "version": "1.0",
+  "main": "./lib/peercoin",
+  "keywords": [
+    "peercoin",
+    "ppc",
+    "ppcoin",
+    "rpc"
+  ],
+  "author": {
+    "name": "Dumitru Glavan",
+    "email": "me@dumitruglavan.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/doomhz/node-peercoin.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "node test/api.js"
+  },
+  "readme": "# node-peercoin\n\nnode-peercoin is a simple wrapper for the Peercoin client's JSON-RPC API.\n\nThe API is equivalent to the API document [here](https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_Calls_list).\nThe methods are exposed as lower camelcase methods on the `peercoin.Client`\nobject.\n\n## Install\n\n`npm install peercoin`\n\n## Setup\n\n1. Traverse to `~/.ppc` or `~/Library/Application Support/PPCoin` and add a file called `ppcoin.conf` if it doesn't already exist.\n\n2. Add these lines to the file:\n\n    rpcuser=username\n\n    rpcpassword=password\n\nYou will use these to login to the server.\n\n3. Start your Peercoin client with the `-server` argument or run `peercoind`\n\n4. You should now be able to communicate with Peercoin JSON-RPC API using the\nnode-peercoin library, try it out!\n\n## Examples\n\n### Create client\n```js\nvar peercoin = require('node-peercoin');\nvar client = new peercoin.Client('localhost', 9902, 'username', 'password');\n```\n\n### Create client with single object\n```js\nvar client = new litecoin.Client({\n  host: 'localhost',\n  port: 9902,\n  username: 'username',\n  password: 'password'\n});\n```\n\n### Get balance across all accounts with minimum confirmations of 6\n\n```js\n\nclient.getBalance('*', 6, function(err, balance) {\n  if (err) console.log(err);\n  console.log('Balance: ' + balance);\n});\n```\n\n### Get the network hash rate\n\n```js\nclient.getNetworkHashPS(function(err, hashps) {\n  if (err) console.log(err);\n  console.log('Network Hash Rate: ' + hashps);\n});\n```\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/doomhz/node-peercoin/issues"
+  },
+  "homepage": "https://github.com/doomhz/node-peercoin",
+}
