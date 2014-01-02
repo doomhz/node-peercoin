@@ -10,7 +10,7 @@ var test = {
 var config = {
     host: 'localhost',
     port: 9902,
-    user: 'jb55',
+    user: 'user',
     pass: 'thisisthepassword'
 };
 

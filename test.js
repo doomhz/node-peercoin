@@ -1,6 +1,6 @@
 
 var peercoin = require('./lib/peercoin');
-var client = new peercoin.Client('localhost', 9902, 'ryland', 'asdfjkq3');
+var client = new peercoin.Client('localhost', 9902, 'doomhz', 'test');
 
 function doCmd(cmd) {
   client[cmd](function(err, data) {
