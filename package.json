@@ -13,9 +13,15 @@
     "name": "Dumitru Glavan",
     "email": "me@dumitruglavan.com"
   },
+  "dependencies": {
+    "underscore": ">= 1.0.3"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/doomhz/node-peercoin.git"
+  },
+  "devDependencies": {
+    "vows": "*"
   },
   "engines": {
     "node": "*"
@@ -28,5 +34,5 @@
   "bugs": {
     "url": "https://github.com/doomhz/node-peercoin/issues"
   },
-  "homepage": "https://github.com/doomhz/node-peercoin",
+  "homepage": "https://github.com/doomhz/node-peercoin"
 }
