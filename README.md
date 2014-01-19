@@ -34,7 +34,7 @@ node-ppcoin library, try it out!
 ### Create client
 ```js
 var peercoin = require('node-peercoin');
-var client = new litecoin.Client('localhost', 9902, 'username', 'password');
+var client = new peercoin.Client('localhost', 9902, 'username', 'password');
 ```
 
 ### Create client with single object
